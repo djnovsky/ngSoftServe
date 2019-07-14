@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.info-header img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 900px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2% 2% 0 2%;
+}
+
+.info-header {
+  text-align: center;
+  }
+
+.line-break {
+  border-bottom: 1px solid black;
+  width: 30%;
+  margin: auto;
+}
+.description {
+  text-align: left;
+}
+
+.two-col-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.feedback-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media only screen and (max-width: 768px) {
+  .feedback-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr 1.8fr;
+  text-align: center;
+  align-items: center;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+}
+
+.contact-image {
+  background-image: url("https://wowweb.space/wp-content/uploads/2019/07/1123-2.png");
+  height: 85vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 0;
+
+}
+
+.contact-image div {
+  align-items: center;
+}
+
+.feedback-list {
+  padding: 0 3% 0 3%;
+}
+
+h4 {
+  font-size: 1.2em;
+  text-decoration: underline;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.wrapper>div {
+  margin-top: 25px;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 100;
+}
+ #navbarNavAltMarkup {
+   padding-left: 7%;
+ }
+
+ .about-wrapper {
+   padding: 2%;
+ }
+
+.btn-submit-form {
+  width: 100%;
+}
+
+.feedback-list > div {
+  background-color: #F4F4F2;
+  padding: 2%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px -1px rgba(110,110,110,1);
+}
+
+.feedback-list h5 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.feedback-list p {
+  font-size: 0.9em;
+  color: #4D4D4D;
+}
+
+.feedback-list a {
+  text-decoration: none;
+  color: #005b9f;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.btn-primary {
+  background-color: #005b9f ;
+  border-bottom-color: #005b9f;
+}

@@ -1,0 +1,30 @@
+<div class="wrapper">
+
+  <div  class="feedback-layout">
+    <div>
+      <div class="form-header">
+        <h3>Please provide your feedback here.</h3>
+        <p>We'll reply you ASAP</p>
+      </div>
+    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+        <div class="form-row">
+        <div class="form-group col-md-6">
+          <input name="name" #name="ngModel" [(ngModel)]="service.formData.name" type="text" class="form-control" placeholder="Name" required="required">
+        </div>
+        <div class="form-group col-md-6">
+          <input name="email" type="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group col-12">
+          <textarea name="feedback" #feedback="ngModel" [(ngModel)]="service.formData.feedback" class="form-control" rows="3" placeholder="Your feedback"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary mb-2 btn-submit-form">SUBMIT</button>
+      </div>
+    </form>
+  </div>
+  <div class="feedback-list">
+    <app-feedback-list></app-feedback-list>
+  </div>
+  </div>
+</div>

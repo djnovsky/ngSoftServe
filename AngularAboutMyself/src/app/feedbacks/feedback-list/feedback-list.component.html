@@ -1,0 +1,9 @@
+<div class="feedback-list">
+  <div *ngFor="let feedb of list">
+    <div>
+      <h5>{{feedb.name}}</h5>
+      <a href="mailto:{{feedb.email}}">{{feedb.email}}</a>
+    </div>
+    <p>"{{feedb.feedback}}"</p>
+  </div>
+</div>
