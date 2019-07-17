@@ -15,14 +15,3 @@ export function ageValidator(control: AbstractControl) {
   }
   return null;
 }
-
-// let myDate=new Date('1990-04-11');
-//
-// function _calculateAge(birthday) { // birthday is a date
-//   var ageDifMs = Date.now() - birthday.getTime();
-//   var ageDate = new Date(ageDifMs); // miliseconds from epoch
-//   return Math.abs(ageDate.getUTCFullYear() - 1970);
-// }
-//
-// //onsole.log(d)
-// console.log(_calculateAge(myDate))
