@@ -1,0 +1,63 @@
+<!--то має бути форма реєстрації  з-->
+<!--датою народження - валідація - 18+-->
+<!--сумою зарплати в в киргизьких сомах більше  - 1 млн вводити не можна-->
+<!--... інші поля які придумаєте-->
+<!--для підсвічування кнопки принаведенні мишки написати свою директиву-->
+
+<div class="wrapper" style="width: 60%;">
+  <div class="form-header">
+    <h3>Register</h3>
+      </div>
+  <form [formGroup]="form" autocomplete="off">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input formControlName="username" type="text" class="form-control" placeholder="Username">
+      </div>
+      <div class="form-group col-md-6">
+        <input formControlName="name" type="text" class="form-control" placeholder="Your name">
+      </div>
+      <div class="form-group col-md-6">
+        <input formControlName="age" type="date" class="form-control" placeholder="Your age">
+      </div>
+      <div class="form-group col-md-6">
+        <input  formControlName="salary" type="text" class="form-control" placeholder="Your salary">
+      </div>
+      <div class="form-group  col-12">
+        <input formControlName="password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary lb-2 btn-submit-form" (click)="onSubmit()">SUBMIT</button>
+      </div>
+    </div>
+  </form>
+  <div class="validations" *ngIf="form.touched" >
+    <div>
+      <span>
+        <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.username.valid"></i>
+        <i class="fa fa-times-circle" style="color:firebrick;"  *ngIf="form.controls.username.invalid"></i>
+        Username should be minimum 3 characters long.
+      </span>
+    </div>
+    <div>
+      <span>
+        <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.age.valid"></i>
+        <i class="fa fa-times-circle" style="color:firebrick;"  *ngIf="form.controls.age.invalid"></i>
+        You should be 18 years old at least.
+      </span>
+    </div>
+    <div>
+      <span>
+        <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.salary.valid"></i>
+        <i class="fa fa-times-circle" style="color:firebrick;"  *ngIf="form.controls.salary.invalid"></i>
+        Your salary should be less than 1000000.
+      </span>
+    </div>
+  </div>
+</div>
+
+<!--[value]="form.get('amount').value | currency:UAH"-->
+<!--[value]="form.controls.salary.val() | currency" -->
+<!--[disabled]="!form.valid"-->
+<!--pattern="^[0-9]*"-->
+
+

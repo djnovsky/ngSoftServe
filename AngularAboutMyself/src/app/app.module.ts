@@ -11,9 +11,10 @@ import { ContactComponent } from './contact/contact.component';
 import { FeedbacksComponent } from './feedbacks/feedbacks.component';
 import { FeedbackListComponent } from './feedbacks/feedback-list/feedback-list.component';
 import {FeedbacksService} from "./shared/feedbacks.service";
-import { FormsModule } from "@angular/forms"
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { RegisterComponent } from './register/register.component';
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ToastrModule } from 'ngx-toastr';
     AboutComponent,
     ContactComponent,
     FeedbacksComponent,
-    FeedbackListComponent
+    FeedbackListComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { ToastrModule } from 'ngx-toastr';
     AngularFirestoreModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [FeedbacksService],
   bootstrap: [AppComponent]
