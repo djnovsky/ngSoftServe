@@ -10,15 +10,15 @@ export class ButtonHighlightDirective {
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('firebrick');
+    this.highlight('scale(.95)');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
     this.highlight(null);
   }
 
-  private highlight(color: string) {
-    this.el.nativeElement.style.backgroundColor = color;
+  private highlight(value: string) {
+    this.el.nativeElement.style.transform = value;
   }
 
 }
