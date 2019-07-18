@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { RegisterComponent } from './register/register.component';
 import {ReactiveFormsModule, FormsModule} from "@angular/forms";
+import { ButtonHighlightDirective } from './register/button-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {ReactiveFormsModule, FormsModule} from "@angular/forms";
     ContactComponent,
     FeedbacksComponent,
     FeedbackListComponent,
-    RegisterComponent
+    RegisterComponent,
+    ButtonHighlightDirective
   ],
   imports: [
     BrowserModule,
